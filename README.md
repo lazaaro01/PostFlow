@@ -299,7 +299,7 @@ Worker (quando o delay expira)
 O projeto possui 6 serviços definidos em `docker-compose.yml`:
 
 | Serviço | Imagem | Porta | Finalidade |
-|---|---|---|---|
+|---|---|---|---|---|
 | `postgres` | postgres:16-alpine | 5432 | Banco de dados |
 | `redis` | redis:7-alpine | 6379 | Filas + cache |
 | `api` | build local | 3000 | Servidor Fastify |
