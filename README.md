@@ -410,3 +410,7 @@ docker compose logs -f api worker
 | `npx prisma studio` | Abre o Prisma Studio (interface do banco) |
 | `npx prisma migrate dev` | Cria/executa migrations |
 | `npx prisma generate` | Gera o Prisma Client |
+
+----
+
+## Desenvolvido por Lázaro Vasconcelos 💻
