@@ -1,0 +1,45 @@
+{
+  "name": "postflow",
+  "version": "1.0.0",
+  "description": "Social media scheduler for Telegram",
+  "main": "dist/app/server.js",
+  "scripts": {
+    "dev": "tsx watch src/app/server.ts",
+    "build": "tsc",
+    "start": "node dist/app/server.js",
+    "worker": "tsx watch src/workers/publish-post.worker.ts",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@bull-board/fastify": "^5.0.0",
+    "@bull-board/ui": "^5.0.0",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/multipart": "^8.1.0",
+    "@fastify/rate-limit": "^9.1.0",
+    "@fastify/static": "^7.0.1",
+    "@prisma/client": "^5.10.0",
+    "bcrypt": "^5.1.1",
+    "bullmq": "^5.7.0",
+    "dotenv": "^17.4.2",
+    "fastify": "^4.26.2",
+    "fastify-plugin": "^4.5.1",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "prom-client": "^15.1.0",
+    "telegraf": "^4.16.3",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.11.16",
+    "prisma": "^5.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
